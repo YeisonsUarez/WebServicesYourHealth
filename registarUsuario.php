@@ -40,7 +40,7 @@ $conexion=mysqli_connect($hostname_localhost,$username_localhost,$password_local
 	file_put_contents($path,base64_decode($fotoPerfilUsuario));
 	//$bytesArchivo=file_get_contents($path);
 
-	$sql="INSERT INTO usuario (numeroDocumento,tipoDocumento,nombreUsuario,fechaNacimientoUsuario,sexoUsuario,correoUsuario,contrasenaUsuario,telefonoUsuario,institucionUsuario,fotoPerfilUsuario,tipoUsuario,fechaRegistro) VALUES (?,?,?,?,?,?,?,?,?,?,?,?);";
+	$sql="INSERT INTO usuario (numeroDocumento,tipoDocumento,nombreUsuario,fechaNacimientoUsuario,sexoUsuario,correoUsuario,contrasenaUsuario,telefonoUsuario,institucion,fotoPerfilUsuario,tipoUsuario,fechaRegistro) VALUES (?,?,?,?,?,?,?,?,?,?,?,?);";
 	$stm=$conexion->prepare($sql);
 	
 	$stm->bind_param('ssssssssssss',$numeroDocumento,$tipoDocumento,$nombreUsuario,$fechaNacimientoUsuario,$sexoUsuario,$correoUsuario,$contrasenaUsuario,$telefonoUsuario,$institucionUsuario,$path,$tipoUsuario,$fechaRegistro);	
