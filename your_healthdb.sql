@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-05-2020 a las 06:40:23
+-- Tiempo de generación: 26-05-2020 a las 04:51:48
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.3.3
 
@@ -89,7 +89,7 @@ CREATE TABLE `citamedica` (
 --
 
 INSERT INTO `citamedica` (`idCita`, `idMedico`, `idTipoCita`, `idPaciente`, `idAdministrador`, `detallesCita`, `fechaCita`, `estadoCita`, `idCupo`, `institucion`, `fechaCreacion`) VALUES
-(3, 'M123', 7, 'P123', 'Default', 'Holi', '21/05/2020', 'Esperando confirmaciÃ³n', 5, 'El rosario', 'Jueves, 21 ');
+(3, 'M123', 7, 'P123', 'AA12334', 'Holi', '21/05/2020', 'Aprobado', 5, 'El rosario', 'Jueves, 21 ');
 
 -- --------------------------------------------------------
 
@@ -170,7 +170,7 @@ CREATE TABLE `usuario` (
   `correoUsuario` varchar(100) NOT NULL,
   `contrasenaUsuario` varchar(100) NOT NULL,
   `telefonoUsuario` varchar(50) NOT NULL,
-  `institucionUsuario` varchar(100) NOT NULL,
+  `institucion` varchar(100) NOT NULL,
   `fotoPerfilUsuario` varchar(200) DEFAULT NULL,
   `tipoUsuario` varchar(100) NOT NULL,
   `fechaRegistro` varchar(100) NOT NULL
@@ -180,11 +180,11 @@ CREATE TABLE `usuario` (
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`numeroDocumento`, `tipoDocumento`, `nombreUsuario`, `fechaNacimientoUsuario`, `sexoUsuario`, `correoUsuario`, `contrasenaUsuario`, `telefonoUsuario`, `institucionUsuario`, `fotoPerfilUsuario`, `tipoUsuario`, `fechaRegistro`) VALUES
+INSERT INTO `usuario` (`numeroDocumento`, `tipoDocumento`, `nombreUsuario`, `fechaNacimientoUsuario`, `sexoUsuario`, `correoUsuario`, `contrasenaUsuario`, `telefonoUsuario`, `institucion`, `fotoPerfilUsuario`, `tipoUsuario`, `fechaRegistro`) VALUES
 ('AA12334', 'Identificacion laboral', 'Jesus', '1994-08-09', 'Masculino', 'Jesus@gmail.com', 'qwerty', '3115540543', 'El rosario', 'imagenes/15886559474709.jpg', 'Administrador', ''),
-('asasokas1', 'Cedula de Cuidadania', 'parra', '22/02/2020', 'Masculino', 'c@gmail.com', 'qwerty', '454515151515', 'El rosario', 'imagenes/asasokas1.jpg', 'Medico', 'Jueves,21deMayode2020'),
-('M123', 'Identificacion laboral', 'Parra', '03/05/2020', 'Masculino', 'parra@gmail.com', 'hrgju', '63828', 'El rosario', 'imagenes/M123.jpg', 'Medico', 'Jueves,21deMayode2020'),
-('P123', 'Cedula de Ciudadania', 'Parra', '03/05/2020', 'Masculino', 'vvx@gmail.com', 'brvjrdvh', '929', 'El rosario', 'imagenes/P123.jpg', 'Paciente', 'Jueves,21deMayode2020');
+('asasokas1', 'Identificacion laboral\r\n', 'Andres', '22/02/2020', 'Masculino', 'c@gmail.com', 'qwerty', '454515151515', 'El rosario', 'imagenes/asasokas1.jpg', 'Medico', 'Jueves,21deMayode2020'),
+('M123', 'Identificacion laboral', 'Parra', '03/05/2020', 'Masculino', 'parra@gmail.com', 'qwerty', '63828', 'El rosario', 'imagenes/M123.jpg', 'Medico', 'Jueves,21deMayode2020'),
+('P123', 'Cedula de Ciudadania', 'Parra', '03/05/2020', 'Masculino', 'vvx@gmail.com', '1234', '929', 'El rosario', 'imagenes/P123.jpg', 'Paciente', 'Jueves,21deMayode2020');
 
 --
 -- Índices para tablas volcadas
